@@ -1,17 +1,17 @@
 import React from 'react';
 import './Projects.css';
-import portfolioImg from '../assets/images/portfolio1.png';
+import toDoImg from '../assets/images/to-do.png';
 import proctorImg from '../assets/images/Proctor.png';
 import codeBridgeImg from '../assets/images/code-bridge.png';
 
 const projects = [
   {
-    title: 'Personal Portfolio',
-    desc: 'My professional portfolio showcasing my skills, projects, and experience as a Full Stack Developer.',
+    title: 'React Todo App',
+    desc: 'A powerful and intuitive todo application built with React, featuring task persistence and a clean user interface.',
     tech: ['React', 'CSS', 'JavaScript'],
-    image: portfolioImg,
-    demo: 'https://my-portfolio-ten-eta-16.vercel.app/',
-    code: 'https://github.com/asinake21/my-portfolio'
+    image: toDoImg,
+    demo: 'https://reat-todo.vercel.app/',
+    code: 'https://github.com/asinake21'
   },
   {
     title: 'BDU Proctor Work System',
