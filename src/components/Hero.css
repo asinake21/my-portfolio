@@ -1,43 +1,120 @@
-.hero {
+.hero-section {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 80px;
+  padding-top: 100px;
+  position: relative;
+  overflow: hidden;
 }
 
-.hero-intro {
-  color: var(--accent-color);
-  font-family: monospace;
-  margin-bottom: 20px;
-  font-size: 1.1rem;
+/* Background Gradients */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.15), transparent 70%);
+  z-index: -1;
 }
 
-.hero-title {
-  font-size: clamp(40px, 8vw, 80px);
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 99px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--accent-primary);
+  margin-bottom: 24px;
+}
+
+.hero-main-title {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.hero-typewriter {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: 24px;
   color: var(--text-primary);
-  margin-bottom: 10px;
 }
 
-.hero-subtitle {
-  font-size: clamp(30px, 6vw, 60px);
-  color: var(--text-secondary);
-  margin-bottom: 30px;
+.typewriter-text {
+  color: var(--accent-secondary);
 }
 
-.hero-description {
-  max-width: 540px;
-  color: var(--text-secondary);
+.cursor {
+  color: var(--accent-secondary);
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.hero-desc {
   font-size: 1.1rem;
-  margin-bottom: 50px;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-bottom: 40px;
+  line-height: 1.7;
 }
 
-.hero-actions {
+.hero-buttons {
   display: flex;
-  gap: 20px;
+  gap: 16px;
+  margin-bottom: 60px;
 }
 
-@media (max-width: 480px) {
-  .hero-actions {
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-num {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background-color: var(--border-color);
+}
+
+@media (max-width: 600px) {
+  .hero-buttons {
     flex-direction: column;
+  }
+  
+  .hero-stats {
+    gap: 15px;
+  }
+  
+  .stat-num {
+    font-size: 1.2rem;
   }
 }

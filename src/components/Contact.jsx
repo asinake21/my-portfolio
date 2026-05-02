@@ -2,25 +2,39 @@ import React from 'react';
 import './Contact.css';
 
 const Contact = () => {
+  const contactInfo = [
+    { label: 'Email Me', value: 'contact@asinake.com', icon: '✉️', link: 'mailto:contact@asinake.com' },
+    { label: 'Telegram', value: '@asinake21', icon: '📱', link: 'https://t.me/asinake21' },
+    { label: 'Location', value: 'Bahir Dar, Ethiopia', icon: '📍', link: '#' }
+  ];
+
   return (
-    <section id="contact" className="section contact">
-      <div className="container contact-container">
-        <h2 className="section-title">Get In Touch</h2>
-        <div className="contact-content">
-          <p className="contact-description">
-            I'm currently looking for new opportunities, especially internships in 
-            full-stack development. Whether you have a question or just want to say hi, 
-            I'll try my best to get back to you!
+    <section id="contact" className="section contact-section-v2">
+      <div className="container">
+        <div className="contact-header-v2">
+          <h2 className="section-title">
+            Get In <span className="gradient-text">Touch</span>
+          </h2>
+          <p className="contact-subtitle">
+            I'm currently looking for new opportunities and collaborations. 
+            Feel free to reach out to me through any of these channels!
           </p>
-          
-          <div className="contact-links">
-            <a href="mailto:contact@asinake.com" className="btn btn-primary">Say Hello</a>
-            <div className="social-links">
-              <a href="https://github.com/asinake21" target="_blank" rel="noreferrer">GitHub</a>
-              <a href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a href="https://t.me/asinake21" target="_blank" rel="noreferrer">Telegram</a>
-            </div>
-          </div>
+        </div>
+
+        <div className="contact-cards-v2">
+          {contactInfo.map((info, i) => (
+            <a key={i} href={info.link} className="contact-card-v2 glass">
+              <div className="contact-icon-v2">{info.icon}</div>
+              <div className="contact-info-v2">
+                <span className="contact-label-v2">{info.label}</span>
+                <span className="contact-value-v2">{info.value}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        <div className="contact-cta-v2">
+          <a href="mailto:contact@asinake.com" className="btn btn-primary lg">Start a Conversation</a>
         </div>
       </div>
     </section>

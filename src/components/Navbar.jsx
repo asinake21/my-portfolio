@@ -6,21 +6,22 @@ const Nav = ({ theme, toggleTheme }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="container header-container">
-        <a href="#" className="logo">
-          <span>AH.</span>
+    <header className={`navbar ${isScrolled ? 'scrolled glass' : ''}`}>
+      <div className="container nav-container">
+        <a href="#" className="nav-logo">
+          <div className="logo-box">AH</div>
+          <span className="logo-text">Asinake</span>
         </a>
         
-        <nav className="nav">
-          <ul className="nav-list">
+        <nav className="nav-menu">
+          <ul className="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -29,15 +30,19 @@ const Nav = ({ theme, toggleTheme }) => {
           </ul>
         </nav>
 
-        <div className="nav-right">
+        <div className="nav-actions">
+          <button className="hire-me-btn">
+            <span className="status-dot"></span>
+            Hire Me
+          </button>
+          
           <button 
-            className="theme-toggle" 
+            className="theme-switcher" 
             onClick={toggleTheme}
             aria-label="Toggle Theme"
           >
             {theme === 'light' ? '🌙' : '☀️'}
           </button>
-          <a href="#contact" className="btn btn-outline nav-cta">Resume</a>
         </div>
       </div>
     </header>

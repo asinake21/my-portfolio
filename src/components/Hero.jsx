@@ -1,22 +1,75 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Hero.css';
 
 const Hero = () => {
+  const titles = ['Full-Stack Developer', 'Problem Solver', 'Creative Coder'];
+  const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+  const [currentText, setCurrentText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+
+  useEffect(() => {
+    const handleType = () => {
+      const currentFullTitle = titles[currentTitleIndex];
+      
+      if (isDeleting) {
+        setCurrentText(currentFullTitle.substring(0, currentText.length - 1));
+        setTypingSpeed(50);
+      } else {
+        setCurrentText(currentFullTitle.substring(0, currentText.length + 1));
+        setTypingSpeed(150);
+      }
+
+      if (!isDeleting && currentText === currentFullTitle) {
+        setTimeout(() => setIsDeleting(true), 2000);
+      } else if (isDeleting && currentText === '') {
+        setIsDeleting(false);
+        setCurrentTitleIndex((prev) => (prev + 1) % titles.length);
+      }
+    };
+
+    const timer = setTimeout(handleType, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [currentText, isDeleting, currentTitleIndex, titles, typingSpeed]);
+
   return (
-    <section className="hero">
+    <section className="hero-section">
       <div className="container hero-container">
         <div className="hero-content fade-in">
-          <p className="hero-intro">Hi, my name is</p>
-          <h1 className="hero-title">Asinake Hailie.</h1>
-          <h2 className="hero-subtitle">I build things for the web.</h2>
-          <p className="hero-description">
-            I'm a full-stack developer specialized in building (and occasionally designing) 
-            exceptional digital experiences. Currently, I'm focused on finishing my CS degree 
-            and building modern web applications.
+          <div className="hero-badge">👋 Welcome to my portfolio</div>
+          <h1 className="hero-main-title">
+            Hi, I'm <span className="gradient-text">Asinake Hailie</span>
+          </h1>
+          <h2 className="hero-typewriter">
+            I craft as a <span className="typewriter-text">{currentText}</span>
+            <span className="cursor">|</span>
+          </h2>
+          <p className="hero-desc">
+            Passionate developer focused on building modern, responsive, and 
+            user-friendly web applications. I turn complex problems into 
+            simple, elegant solutions.
           </p>
-          <div className="hero-actions">
-            <a href="#projects" className="btn btn-primary">Check out my work!</a>
-            <a href="#contact" className="btn btn-outline">Get in touch</a>
+          
+          <div className="hero-buttons">
+            <a href="#projects" className="btn btn-primary">View Projects</a>
+            <a href="#contact" className="btn btn-outline">Contact Me</a>
+          </div>
+
+          <div className="hero-stats">
+            <div className="stat-item">
+              <span className="stat-num">15+</span>
+              <span className="stat-label">Projects</span>
+            </div>
+            <div className="stat-divider"></div>
+            <div className="stat-item">
+              <span className="stat-num">2+</span>
+              <span className="stat-label">Years Exp.</span>
+            </div>
+            <div className="stat-divider"></div>
+            <div className="stat-item">
+              <span className="stat-num">100%</span>
+              <span className="stat-label">Commitment</span>
+            </div>
           </div>
         </div>
       </div>
