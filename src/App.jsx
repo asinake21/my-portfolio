@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Nav from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -8,9 +8,20 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
+
   return (
     <div className="app">
-      <Nav />
+      <Nav theme={theme} toggleTheme={toggleTheme} />
       <main>
         <Hero />
         <About />

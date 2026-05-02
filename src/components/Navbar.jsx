@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Nav.css';
 
-const Nav = () => {
+const Nav = ({ theme, toggleTheme }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -28,7 +28,16 @@ const Nav = () => {
           </ul>
         </nav>
 
-        <a href="#contact" className="btn btn-outline nav-cta">Resume</a>
+        <div className="nav-right">
+          <button 
+            className="theme-toggle" 
+            onClick={toggleTheme}
+            aria-label="Toggle Theme"
+          >
+            {theme === 'light' ? '🌙' : '☀️'}
+          </button>
+          <a href="#contact" className="btn btn-outline nav-cta">Resume</a>
+        </div>
       </div>
     </header>
   );
