@@ -1,0 +1,36 @@
+.contact {
+  text-align: center;
+  background-color: var(--bg-secondary);
+}
+
+.contact-container {
+  max-width: 600px;
+}
+
+.contact-description {
+  color: var(--text-secondary);
+  margin-bottom: 50px;
+  font-size: 1.1rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.social-links {
+  display: flex;
+  gap: 30px;
+}
+
+.social-links a {
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.social-links a:hover {
+  color: var(--accent-color);
+}

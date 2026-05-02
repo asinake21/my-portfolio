@@ -1,0 +1,43 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.hero-intro {
+  color: var(--accent-color);
+  font-family: monospace;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.hero-title {
+  font-size: clamp(40px, 8vw, 80px);
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: clamp(30px, 6vw, 60px);
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+}
+
+.hero-description {
+  max-width: 540px;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 480px) {
+  .hero-actions {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,19 @@
+.footer {
+  padding: 40px 0;
+  text-align: center;
+  background-color: var(--bg-color);
+  border-top: 1px solid var(--border-color);
+}
+
+.footer-text {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.footer-copyright {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  opacity: 0.6;
+}
