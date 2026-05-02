@@ -9,10 +9,10 @@
 }
 
 .navbar.scrolled {
-  background-color: var(--glass-bg);
+  background-color: var(--nav-bg);
   padding: 12px 0;
-  border-bottom: 1px solid var(--border-color);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid var(--nav-border);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
 }
 
 .nav-container {
@@ -28,6 +28,11 @@
   font-weight: 800;
   font-size: 1.25rem;
   color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.navbar.scrolled .nav-logo {
+  color: var(--nav-text);
 }
 
 .logo-box {
@@ -51,6 +56,17 @@
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.navbar.scrolled .nav-links a {
+  color: var(--nav-text);
+  opacity: 0.8;
+}
+
+.navbar.scrolled .nav-links a:hover {
+  color: var(--accent-primary);
+  opacity: 1;
 }
 
 .nav-links a:hover {
@@ -78,6 +94,12 @@
   transition: all 0.3s ease;
 }
 
+.navbar.scrolled .hire-me-btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--nav-text);
+}
+
 .hire-me-btn:hover {
   border-color: var(--accent-primary);
 }
@@ -102,6 +124,11 @@
   cursor: pointer;
   font-size: 1.1rem;
   transition: all 0.3s ease;
+}
+
+.navbar.scrolled .theme-switcher {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--nav-text);
 }
 
 .theme-switcher:hover {

@@ -13,7 +13,11 @@
   --accent-secondary: #9333ea; /* Purple-600 */
   --border-color: #e5e7eb;
   --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --glass-bg: rgba(255, 255, 255, 0.95); /* More opaque white for light mode */
+  
+  /* Navbar specifically dark even in light mode */
+  --nav-bg: #0f172a; /* Slate-900 */
+  --nav-text: #f3f4f6;
+  --nav-border: #1e293b;
 }
 
 [data-theme='dark'] {
@@ -26,7 +30,10 @@
   --accent-secondary: #a855f7; /* Purple-500 */
   --border-color: #1e293b;
   --card-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
-  --glass-bg: #020617; /* Solid dark color for dark mode navbar */
+  
+  --nav-bg: #020617; /* Slate-950 */
+  --nav-text: #f3f4f6;
+  --nav-border: #1e293b;
 }
 
 :root {
@@ -116,14 +123,6 @@ h1, h2, h3, h4 {
   border-color: var(--accent-primary);
   color: var(--accent-primary);
   transform: translateY(-2px);
-}
-
-/* Glassmorphism */
-.glass {
-  background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--border-color);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
 }
 
 /* Progress Bars */
