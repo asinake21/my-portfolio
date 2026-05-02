@@ -31,10 +31,9 @@ const Nav = ({ theme, toggleTheme }) => {
         </nav>
 
         <div className="nav-actions">
-          <button className="hire-me-btn">
-            <span className="status-dot"></span>
-            Hire Me
-          </button>
+          <a href="#contact" className="resume-btn">
+            Resume
+          </a>
           
           <button 
             className="theme-switcher" 

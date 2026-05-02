@@ -4,9 +4,9 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 16px 0; /* Reduced initial padding for a cleaner look */
+  padding: 16px 0;
   transition: all 0.3s ease;
-  background-color: var(--nav-bg); /* Always have background */
+  background-color: var(--nav-bg);
   border-bottom: 1px solid var(--nav-border);
   backdrop-filter: blur(12px);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -29,7 +29,7 @@
   gap: 12px;
   font-weight: 800;
   font-size: 1.25rem;
-  color: var(--nav-text); /* Always use light text on dark nav */
+  color: var(--nav-text);
 }
 
 .logo-box {
@@ -68,11 +68,11 @@
   gap: 16px;
 }
 
-.hire-me-btn {
+.resume-btn {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
+  justify-content: center;
+  padding: 8px 24px;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 99px;
@@ -81,19 +81,17 @@
   color: var(--nav-text);
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-.hire-me-btn:hover {
+.resume-btn:hover {
   border-color: var(--accent-primary);
   background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
 }
 
 .status-dot {
-  width: 8px;
-  height: 8px;
-  background-color: #10b981;
-  border-radius: 50%;
-  box-shadow: 0 0 10px #10b981;
+  display: none; /* Removed for Resume button */
 }
 
 .theme-switcher {
