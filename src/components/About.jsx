@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import profileImg from '../assets/images/portfolio.jpg';
 
 const About = () => {
   const features = [
@@ -15,7 +16,7 @@ const About = () => {
           <div className="about-visual">
             <div className="profile-img-container">
               <img 
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80" 
+                src={profileImg} 
                 alt="Asinake" 
                 className="profile-img"
               />

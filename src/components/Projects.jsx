@@ -1,8 +1,7 @@
 import React from 'react';
 import './Projects.css';
-import project1 from '../assets/project1.png';
-import project2 from '../assets/project2.png';
-import project3 from '../assets/project3.png';
+import project1 from '../assets/images/portfolio.jpg';
+import project2 from '../assets/images/portfolio1.png';
 
 const projects = [
   {
@@ -25,7 +24,7 @@ const projects = [
     title: 'TaskFlow Solutions',
     desc: 'Collaborative task management for teams.',
     tech: ['Firebase', 'React', 'Tailwind'],
-    image: project3,
+    image: project1, // Reusing project1 as there are only 2 images
     demo: '#',
     code: 'https://github.com/asinake21'
   }
