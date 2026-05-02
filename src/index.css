@@ -14,10 +14,10 @@
   --border-color: #e5e7eb;
   --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   
-  /* Navbar specifically dark even in light mode */
-  --nav-bg: #0f172a; /* Slate-900 */
+  /* Navbar specifically dark gray even in light mode */
+  --nav-bg: rgba(30, 41, 59, 0.95); /* Slate-800 with slight transparency */
   --nav-text: #f3f4f6;
-  --nav-border: #1e293b;
+  --nav-border: rgba(51, 65, 85, 0.5); /* Slate-700 border */
 }
 
 [data-theme='dark'] {
@@ -31,7 +31,7 @@
   --border-color: #1e293b;
   --card-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
   
-  --nav-bg: #020617; /* Slate-950 */
+  --nav-bg: rgba(15, 23, 42, 0.95); /* Slate-900 */
   --nav-text: #f3f4f6;
   --nav-border: #1e293b;
 }
