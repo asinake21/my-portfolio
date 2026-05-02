@@ -1,31 +1,32 @@
 import React from 'react';
 import './Projects.css';
-import project1 from '../assets/images/portfolio.jpg';
-import project2 from '../assets/images/portfolio1.png';
+import portfolioImg from '../assets/images/portfolio1.png';
+import proctorImg from '../assets/images/Proctor.png';
+import codeBridgeImg from '../assets/images/code-bridge.png';
 
 const projects = [
   {
-    title: 'Nexus AI Dashboard',
-    desc: 'Real-time analytics with predictive insights.',
-    tech: ['React', 'Node.js', 'Chart.js'],
-    image: project1,
-    demo: '#',
+    title: 'Personal Portfolio',
+    desc: 'My professional portfolio showcasing my skills, projects, and experience as a Full Stack Developer.',
+    tech: ['React', 'CSS', 'JavaScript'],
+    image: portfolioImg,
+    demo: 'https://my-portfolio-ten-eta-16.vercel.app/',
+    code: 'https://github.com/asinake21/my-portfolio'
+  },
+  {
+    title: 'BDU Proctor Work System',
+    desc: 'A specialized management system for university proctors to track and manage student activities and work schedules.',
+    tech: ['MERN Stack', 'Tailwind', 'Redux'],
+    image: proctorImg,
+    demo: 'https://bdu-proctor-work-system.vercel.app/',
     code: 'https://github.com/asinake21'
   },
   {
-    title: 'EcoMarket Platform',
-    desc: 'Sustainable e-commerce for local artisans.',
-    tech: ['MongoDB', 'Express', 'React'],
-    image: project2,
-    demo: '#',
-    code: 'https://github.com/asinake21'
-  },
-  {
-    title: 'TaskFlow Solutions',
-    desc: 'Collaborative task management for teams.',
-    tech: ['Firebase', 'React', 'Tailwind'],
-    image: project1, // Reusing project1 as there are only 2 images
-    demo: '#',
+    title: 'Code Bridge for Programmers',
+    desc: 'A collaborative platform designed to help programmers connect, share code, and solve problems together.',
+    tech: ['React', 'Node.js', 'Socket.io'],
+    image: codeBridgeImg,
+    demo: 'https://code-bridge-for-programmers1.vercel.app/',
     code: 'https://github.com/asinake21'
   }
 ];
@@ -46,7 +47,7 @@ const Projects = () => {
                 <div className="project-overlay">
                   <div className="overlay-btns">
                     <a href={project.code} target="_blank" rel="noreferrer" className="overlay-btn">Code</a>
-                    <a href={project.demo} className="overlay-btn primary">Live</a>
+                    <a href={project.demo} target="_blank" rel="noreferrer" className="overlay-btn primary">Live</a>
                   </div>
                 </div>
               </div>
