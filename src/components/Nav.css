@@ -9,8 +9,10 @@
 }
 
 .navbar.scrolled {
+  background-color: var(--glass-bg);
   padding: 12px 0;
   border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
 }
 
 .nav-container {
