@@ -36,7 +36,6 @@ const Hero = () => {
     <section className="hero-section">
       <div className="container hero-container">
         <div className="hero-content fade-in">
-          <div className="hero-badge">👋 Welcome to my portfolio</div>
           <h1 className="hero-main-title">
             Hello, I'm <span className="gradient-text">Asinake Hailie</span>
           </h1>
