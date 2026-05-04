@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
-  margin-top: 60px;
+  margin-top: 30px; /* Reduced from 60px */
 }
 
 .project-card-v2 {
@@ -29,7 +29,7 @@
 .p-img {
   width: 100%;
   height: 100%;
-  object-cover: cover;
+  object-fit: cover; /* Fixed typo from object-cover */
   transition: transform 0.5s ease;
 }
 
