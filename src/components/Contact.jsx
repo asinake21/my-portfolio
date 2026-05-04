@@ -3,8 +3,8 @@ import './Contact.css';
 
 const Contact = () => {
   const contactInfo = [
-    { label: 'Email', value: 'contact@asinake.com', icon: '✉️', link: 'mailto:contact@asinake.com' },
-    { label: 'Phone', value: '+251 945 342 453', icon: '📞', link: 'tel:+251945342453' },
+    { label: 'Email', value: 'asinakehailie00@gmail.com', icon: '✉️', link: 'mailto:asinakehailie00@gmail.com' },
+    { label: 'Phone', value: '+251 929 395 199', icon: '📞', link: 'tel:+251929395199' },
     { label: 'Location', value: 'Ethiopia:Available for remote work worldwide', icon: '📍', link: '#' }
   ];
 

@@ -37,7 +37,7 @@ const Footer = () => {
             <a href="https://t.me/asinake21" target="_blank" rel="noreferrer" className="social-icon-btn" aria-label="Telegram">
               <i className="fa-brands fa-telegram"></i>
             </a>
-            <a href="mailto:contact@asinake.com" className="social-icon-btn" aria-label="Email">
+            <a href="mailto:asinakehailie00@gmail.com" className="social-icon-btn" aria-label="Email">
               <i className="fa-solid fa-envelope"></i>
             </a>
           </div>
