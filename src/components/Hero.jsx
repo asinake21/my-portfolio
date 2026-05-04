@@ -38,7 +38,7 @@ const Hero = () => {
         <div className="hero-content fade-in">
           <div className="hero-badge">👋 Welcome to my portfolio</div>
           <h1 className="hero-main-title">
-            Hi, I'm <span className="gradient-text">Asinake Hailie</span>
+            Hello, I'm <span className="gradient-text">Asinake Hailie</span>
           </h1>
           <h2 className="hero-typewriter">
             I craft as a <span className="typewriter-text">{currentText}</span>
@@ -53,23 +53,6 @@ const Hero = () => {
           <div className="hero-buttons">
             <a href="#projects" className="btn btn-primary">View Projects</a>
             <a href="#contact" className="btn btn-outline">Contact Me</a>
-          </div>
-
-          <div className="hero-stats">
-            <div className="stat-item">
-              <span className="stat-num">15+</span>
-              <span className="stat-label">Projects</span>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <span className="stat-num">2+</span>
-              <span className="stat-label">Years Exp.</span>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <span className="stat-num">100%</span>
-              <span className="stat-label">Commitment</span>
-            </div>
           </div>
         </div>
       </div>
