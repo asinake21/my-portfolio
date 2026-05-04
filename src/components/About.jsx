@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import profileImg from '../assets/images/portfolio.jpg';
+import profileImg from '../assets/images/portfolio.png';
 
 const About = () => {
   const features = [
