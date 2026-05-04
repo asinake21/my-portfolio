@@ -1,5 +1,6 @@
 .experience-section {
   background-color: var(--bg-color);
+  padding-bottom: 40px; /* Reduced to bring next section closer */
 }
 
 .experience-grid {

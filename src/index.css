@@ -38,7 +38,7 @@
 
 :root {
   --container-width: 1200px;
-  --section-padding: 120px;
+  --section-padding: 80px; /* Reduced from 120px */
   --transition-speed: 0.4s;
 }
 
