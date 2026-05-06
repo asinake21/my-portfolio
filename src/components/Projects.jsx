@@ -16,7 +16,7 @@ const projects = [
   {
     title: 'BDU Proctor Work System',
     desc: 'A specialized management system for university proctors to track and manage student activities and work schedules.',
-    tech: ['MERN Stack', 'Tailwind', 'Redux'],
+    tech: ['HTML', 'CSS', 'JavaScript', 'React'],
     image: proctorImg,
     demo: 'https://bdu-proctor-work-system.vercel.app/',
     code: 'https://github.com/asinake21'
@@ -24,7 +24,7 @@ const projects = [
   {
     title: 'Code Bridge for Programmers',
     desc: 'A collaborative platform designed to help programmers connect, share code, and solve problems together.',
-    tech: ['React', 'Node.js', 'Socket.io'],
+    tech: ['React', 'Tailwind CSS', 'Node.js', 'MongoDB'],
     image: codeBridgeImg,
     demo: 'https://code-bridge-for-programmers1.vercel.app/',
     code: 'https://github.com/asinake21'

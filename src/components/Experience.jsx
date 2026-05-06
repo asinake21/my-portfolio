@@ -4,31 +4,25 @@ import './Experience.css';
 const Experience = () => {
   const education = [
     {
-      year: '2022- 2026',
+      year: '2024 – present',
       title: 'Bachelor of Science in Computer Science',
-      institution: 'Bahirdar University',
-      desc: 'Specialized in full-stack Development'
+      institution: 'Bahir Dar University',
+      desc: 'Gained a strong foundation in programming logic, algorithms, and core computer science concepts. Completed relevant certifications to support practical software engineering skills.'
     }
   ];
 
   const experience = [
     {
-      year: '2025- PRESENT',
+      year: '2024 – Present',
       title: 'Full-Stack Developer',
       institution: 'Self-Employed / Freelance',
-      desc: 'advance development of scalable web and mobile applications using React, Node.js, express, golang mysql, orm. Mentoring junior developers and implementing best practices.'
+      desc: 'Spearheading the development of scalable web and mobile applications. Leveraging React, Node.js, Express, MongoDB, and MySQL for web projects, while utilizing Flutter (Dart) for cross-platform mobile solutions.'
     },
     {
-      year: '2024- 2025',
-      title: 'junior Full-Stack Developer',
-      institution: 'bahirdar university',
-      desc: 'Developed and maintained multiple projects. Worked with various technologies including MongoDB, Express, React, and Node.js.'
-    },
-    {
-      year: '2022- 2023',
-      title: 'algorithm, prgogramming, machine language basics',
-      institution: 'bairdar university',
-      desc: 'Started my professional journey studying the logic of programming and learning industry best practices.'
+      year: '2024 – 2026',
+      title: 'Junior Full-Stack Developer',
+      institution: 'Bahir Dar University',
+      desc: 'Contributed to multiple web projects utilizing the MERN stack. Collaborated closely with peers in team-based environments and actively participated in hackathons to solve technical challenges.'
     }
   ];
 
