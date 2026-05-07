@@ -12,7 +12,7 @@ const projects = [
     tech: ['React', 'Tailwind CSS', 'Node.js', 'MongoDB'],
     image: codeBridgeImg,
     demo: 'https://code-bridge-for-programmers1.vercel.app/',
-    code: 'https://github.com/asinake21/Code_bridge-for_programmers1',
+    code: 'https://github.com/asinake21/-Code_bridge_for_programmers1',
   },
   {
     title: 'BDU Proctor Work System',
@@ -36,7 +36,7 @@ const projects = [
     tech: ['React', 'CSS', 'JavaScript'],
     image: toDoImg,
     demo: 'https://reat-todo.vercel.app/',
-    code: 'https://github.com/asinake/reat_todo',
+    code: 'https://github.com/asinake21/reat_todo',
   },
 ];
 
@@ -47,7 +47,7 @@ const Projects = () => {
         <h2 className="section-title text-center">
           Featured <span className="gradient-text">Projects</span>
         </h2>
-        
+
         <div className="projects-grid-layout">
           {projects.map((project, i) => (
             <div key={i} className="project-card-v2 glass">
@@ -62,7 +62,7 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="project-info-v2">
                 <div className="project-tags">
                   {project.tech.map((t, j) => (
