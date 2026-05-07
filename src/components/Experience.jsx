@@ -15,7 +15,7 @@ const Experience = () => {
     {
       year: '2024 – Present',
       title: 'Full-Stack Developer',
-      institution: 'Self-Employed / Freelance',
+      institution: '',
       desc: 'Spearheading the development of scalable web and mobile applications. Leveraging React, Node.js, Express, MongoDB, and MySQL for web projects, while utilizing Flutter (Dart) for cross-platform mobile solutions.'
     },
     {

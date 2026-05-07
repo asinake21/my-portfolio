@@ -3,15 +3,22 @@ import './Projects.css';
 import toDoImg from '../assets/images/to-do.png';
 import proctorImg from '../assets/images/Proctor.png';
 import codeBridgeImg from '../assets/images/code-bridge.png';
+import netStreamImg from '../assets/images/netstream.png';
 
 const projects = [
+  {
+    title: 'NetStream Movies',
+    desc: 'A Netflix-style movie streaming platform that lets users browse, search, and watch movie trailers with a sleek dark-themed interface.',
+    tech: ['React', 'JavaScript', 'CSS', 'API'],
+    image: netStreamImg,
+    demo: 'https://netstream-movies.vercel.app/',
+  },
   {
     title: 'React Todo App',
     desc: 'A powerful and intuitive todo application built with React, featuring task persistence and a clean user interface.',
     tech: ['React', 'CSS', 'JavaScript'],
     image: toDoImg,
     demo: 'https://reat-todo.vercel.app/',
-    code: 'https://github.com/asinake21'
   },
   {
     title: 'BDU Proctor Work System',
@@ -19,7 +26,6 @@ const projects = [
     tech: ['HTML', 'CSS', 'JavaScript', 'React'],
     image: proctorImg,
     demo: 'https://bdu-proctor-work-system.vercel.app/',
-    code: 'https://github.com/asinake21'
   },
   {
     title: 'Code Bridge for Programmers',
@@ -27,7 +33,6 @@ const projects = [
     tech: ['React', 'Tailwind CSS', 'Node.js', 'MongoDB'],
     image: codeBridgeImg,
     demo: 'https://code-bridge-for-programmers1.vercel.app/',
-    code: 'https://github.com/asinake21'
   }
 ];
 
@@ -46,8 +51,7 @@ const Projects = () => {
                 <img src={project.image} alt={project.title} className="p-img" />
                 <div className="project-overlay">
                   <div className="overlay-btns">
-                    <a href={project.code} target="_blank" rel="noreferrer" className="overlay-btn">Code</a>
-                    <a href={project.demo} target="_blank" rel="noreferrer" className="overlay-btn primary">Live</a>
+                    <a href={project.demo} target="_blank" rel="noreferrer" className="overlay-btn primary">Live Demo</a>
                   </div>
                 </div>
               </div>
