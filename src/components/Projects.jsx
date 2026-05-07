@@ -12,6 +12,7 @@ const projects = [
     tech: ['React', 'Tailwind CSS', 'Node.js', 'MongoDB'],
     image: codeBridgeImg,
     demo: 'https://code-bridge-for-programmers1.vercel.app/',
+    code: 'https://github.com/asinake21/Code_bridge-for_programmers1',
   },
   {
     title: 'BDU Proctor Work System',
@@ -19,6 +20,7 @@ const projects = [
     tech: ['HTML', 'CSS', 'JavaScript', 'React'],
     image: proctorImg,
     demo: 'https://bdu-proctor-work-system.vercel.app/',
+    code: 'https://github.com/asinake21/BDU_PROCTOR_WORK_SYSTEM',
   },
   {
     title: 'NetStream Movies',
@@ -26,6 +28,7 @@ const projects = [
     tech: ['React', 'JavaScript', 'CSS', 'API'],
     image: netStreamImg,
     demo: 'https://netstream-movies.vercel.app/',
+    code: null,
   },
   {
     title: 'React Todo App',
@@ -33,6 +36,7 @@ const projects = [
     tech: ['React', 'CSS', 'JavaScript'],
     image: toDoImg,
     demo: 'https://reat-todo.vercel.app/',
+    code: 'https://github.com/asinake/reat_todo',
   },
 ];
 
@@ -51,6 +55,9 @@ const Projects = () => {
                 <img src={project.image} alt={project.title} className="p-img" />
                 <div className="project-overlay">
                   <div className="overlay-btns">
+                    {project.code && (
+                      <a href={project.code} target="_blank" rel="noreferrer" className="overlay-btn">Code</a>
+                    )}
                     <a href={project.demo} target="_blank" rel="noreferrer" className="overlay-btn primary">Live Demo</a>
                   </div>
                 </div>
