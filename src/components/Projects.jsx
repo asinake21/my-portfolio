@@ -7,6 +7,20 @@ import netStreamImg from '../assets/images/netstream.png';
 
 const projects = [
   {
+    title: 'Code Bridge for Programmers',
+    desc: 'A collaborative platform designed to help programmers connect, share code, and solve problems together.',
+    tech: ['React', 'Tailwind CSS', 'Node.js', 'MongoDB'],
+    image: codeBridgeImg,
+    demo: 'https://code-bridge-for-programmers1.vercel.app/',
+  },
+  {
+    title: 'BDU Proctor Work System',
+    desc: 'A specialized management system for university proctors to track and manage student activities and work schedules.',
+    tech: ['HTML', 'CSS', 'JavaScript', 'React'],
+    image: proctorImg,
+    demo: 'https://bdu-proctor-work-system.vercel.app/',
+  },
+  {
     title: 'NetStream Movies',
     desc: 'A Netflix-style movie streaming platform that lets users browse, search, and watch movie trailers with a sleek dark-themed interface.',
     tech: ['React', 'JavaScript', 'CSS', 'API'],
@@ -20,20 +34,6 @@ const projects = [
     image: toDoImg,
     demo: 'https://reat-todo.vercel.app/',
   },
-  {
-    title: 'BDU Proctor Work System',
-    desc: 'A specialized management system for university proctors to track and manage student activities and work schedules.',
-    tech: ['HTML', 'CSS', 'JavaScript', 'React'],
-    image: proctorImg,
-    demo: 'https://bdu-proctor-work-system.vercel.app/',
-  },
-  {
-    title: 'Code Bridge for Programmers',
-    desc: 'A collaborative platform designed to help programmers connect, share code, and solve problems together.',
-    tech: ['React', 'Tailwind CSS', 'Node.js', 'MongoDB'],
-    image: codeBridgeImg,
-    demo: 'https://code-bridge-for-programmers1.vercel.app/',
-  }
 ];
 
 const Projects = () => {
