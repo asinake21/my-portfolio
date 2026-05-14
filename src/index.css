@@ -1,25 +1,21 @@
 :root {
-  /* Light Theme Colors (Restored to Purple/Indigo) */
+  /* Light Theme Colors (Purple/Indigo Theme) */
   --bg-color: #ffffff;
   --bg-secondary: #f9fafb;
   --text-primary: #111827;
   --text-secondary: #4b5563;
   --accent-primary: #6366f1;
-  /* Indigo */
   --accent-secondary: #a855f7;
-  /* Purple */
   --border-color: #e5e7eb;
   --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   --nav-bg: rgba(255, 255, 255, 0.8);
   --nav-text: #111827;
   --nav-border: rgba(0, 0, 0, 0.05);
 
-  /* Dynamic Container Widths */
-  --container-width: 1390px;
-  /* Focused width for About, Skills, Projects */
-  --container-width-large: 1900px;
-  /* Expanded width for Home/Hero */
-  --section-padding: 60px; /* Reduced gap between sections */
+  /* Refined Downscaled Container Widths */
+  --container-width: 1280px; /* Standard width for About, Skills, Projects */
+  --container-width-large: 1600px; /* Balanced width for Home/Hero */
+  --section-padding: 80px;
   --transition-speed: 0.4s;
 }
 
@@ -53,19 +49,16 @@ body {
   background-color: var(--bg-color);
   color: var(--text-primary);
   line-height: 1.6;
-  font-size: 1.2rem;
+  font-size: 1.1rem; /* Slightly reduced base font */
   overflow-x: hidden;
   transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
 /* Typography */
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
   font-family: 'Outfit', sans-serif;
-  font-weight: 900;
-  line-height: 1.05;
+  font-weight: 800; /* Balanced boldness */
+  line-height: 1.2; /* Better readability */
 }
 
 .gradient-text {
@@ -98,12 +91,12 @@ h4 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 32px;
+  padding: 10px 28px; /* Slightly smaller padding */
   border-radius: 9999px;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
   transition: all var(--transition-speed);
-  font-size: 1rem;
+  font-size: 0.95rem; /* Downscaled font size */
   text-decoration: none;
 }
 
@@ -145,7 +138,7 @@ h4 {
 /* Progress Bars */
 .progress-container {
   width: 100%;
-  height: 10px;
+  height: 8px; /* Slightly thinner */
   background-color: var(--border-color);
   border-radius: 99px;
   margin-top: 10px;
@@ -162,9 +155,8 @@ h4 {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
