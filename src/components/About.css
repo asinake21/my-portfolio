@@ -4,8 +4,8 @@
 
 .about-grid-layout {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 80px;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 100px;
   align-items: center;
 }
 
@@ -16,13 +16,13 @@
 .profile-img-container {
   position: relative;
   width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
+  max-width: 500px;
+  margin: 0;
 }
 
 .profile-img {
   width: 100%;
-  border-radius: 24px;
+  border-radius: 32px;
   box-shadow: var(--card-shadow);
   position: relative;
   z-index: 2;
@@ -30,65 +30,71 @@
 
 .dot-grid {
   position: absolute;
-  top: -30px;
-  left: -30px;
-  width: 120px;
-  height: 120px;
-  background-image: radial-gradient(var(--accent-primary) 2px, transparent 2px);
-  background-size: 20px 20px;
-  opacity: 0.3;
+  top: -40px;
+  left: -40px;
+  width: 150px;
+  height: 150px;
+  background-image: radial-gradient(var(--accent-primary) 3px, transparent 3px);
+  background-size: 25px 25px;
+  opacity: 0.4;
   z-index: 1;
 }
 
 .about-bio {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .about-bio p {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: var(--text-secondary);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   line-height: 1.8;
 }
 
 .highlight {
   color: var(--accent-secondary);
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .feature-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
 }
 
 .feature-card {
-  padding: 24px;
+  padding: 32px;
   background-color: var(--bg-color);
   border: 1px solid var(--border-color);
-  border-radius: 16px;
+  border-radius: 20px;
   transition: all 0.3s ease;
 }
 
 .feature-card:hover {
   border-color: var(--accent-primary);
-  transform: translateY(-5px);
+  transform: translateY(-8px);
 }
 
 .feature-title {
-  font-size: 1.1rem;
-  margin-bottom: 8px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 12px;
   color: var(--text-primary);
 }
 
 .feature-desc {
-  font-size: 0.85rem;
+  font-size: 1.1rem;
   color: var(--text-secondary);
+  line-height: 1.6;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .about-grid-layout {
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 80px;
+  }
+  
+  .profile-img-container {
+    margin: 0 auto;
   }
 }

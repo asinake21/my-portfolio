@@ -8,6 +8,8 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
+import Resume from './components/Resume';
+
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
 
@@ -29,6 +31,7 @@ function App() {
         <Skills />
         <Experience />
         <Projects />
+        <Resume />
         <Contact />
       </main>
       <Footer />

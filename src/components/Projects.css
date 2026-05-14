@@ -4,67 +4,89 @@
 
 .projects-grid-layout {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  margin-top: 30px; /* Reduced from 60px */
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); /* Slightly smaller cards */
+  gap: 50px;
+  margin-top: 60px;
 }
 
 .project-card-v2 {
-  border-radius: 24px;
+  border-radius: 32px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .project-card-v2:hover {
-  transform: translateY(-8px);
+  transform: translateY(-15px);
   border-color: var(--accent-primary);
+  box-shadow: var(--card-shadow);
 }
 
 .project-img-wrapper {
   position: relative;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16/10;
   overflow: hidden;
 }
 
 .p-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Fixed typo from object-cover */
-  transition: transform 0.5s ease;
+  object-fit: cover;
+  transition: transform 0.6s ease;
 }
 
 .project-card-v2:hover .p-img {
   transform: scale(1.1);
 }
 
-.project-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(2, 6, 23, 0.6);
-  backdrop-filter: blur(4px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+.project-info-v2 {
+  padding: 32px; /* Adjusted for smaller cards */
 }
 
-.project-card-v2:hover .project-overlay {
-  opacity: 1;
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.project-pill {
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 99px;
+  color: var(--accent-primary);
+}
+
+.p-title-v2 {
+  font-size: 1.8rem; /* Massive title */
+  margin-bottom: 15px;
+  color: var(--text-primary);
+  font-weight: 900;
+}
+
+.p-desc-v2 {
+  font-size: 1.2rem; /* Large description */
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
 .overlay-btns {
   display: flex;
-  gap: 12px;
+  gap: 15px;
+  margin-top: 30px;
 }
 
 .overlay-btn {
-  padding: 8px 20px;
+  padding: 12px 28px;
   border-radius: 99px;
-  background-color: #fff;
-  color: #020617;
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 800;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
@@ -73,40 +95,22 @@
   color: #fff;
 }
 
-.overlay-btn:hover {
-  transform: scale(1.05);
-}
-
-.project-info-v2 {
-  padding: 24px;
-}
-
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 16px;
-}
-
-.project-pill {
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  background-color: var(--bg-color);
-  border: 1px solid var(--border-color);
-  border-radius: 99px;
-  color: var(--accent-primary);
-}
-
-.p-title-v2 {
-  font-size: 1.25rem;
-  margin-bottom: 8px;
+.overlay-btn.outline {
+  border: 2px solid var(--border-color);
   color: var(--text-primary);
 }
 
-.p-desc-v2 {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  line-height: 1.5;
+.overlay-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+  .projects-grid-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-info-v2 {
+    padding: 24px;
+  }
 }

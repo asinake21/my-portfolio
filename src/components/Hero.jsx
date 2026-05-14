@@ -2,7 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './Hero.css';
 
 const Hero = () => {
-  const titles = ['Full-Stack Developer', 'Problem Solver', 'Creative Coder'];
+  const titles = [
+    'Full-Stack Web Developer',
+    'Real World Problem Solver',
+    'MERN Stack Developer',
+    'Generating Creative Ideas'
+  ];
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -11,7 +16,7 @@ const Hero = () => {
   useEffect(() => {
     const handleType = () => {
       const currentFullTitle = titles[currentTitleIndex];
-      
+
       if (isDeleting) {
         setCurrentText(currentFullTitle.substring(0, currentText.length - 1));
         setTypingSpeed(50);
@@ -44,13 +49,14 @@ const Hero = () => {
             <span className="cursor">|</span>
           </h2>
           <p className="hero-desc">
-            Passionate developer focused on building modern, responsive, and 
-            user-friendly web applications. I turn complex problems into 
+            Passionate developer focused on building modern, responsive, and
+            user-friendly web applications. I turn complex problems into
             simple, elegant solutions.
           </p>
-          
+
           <div className="hero-buttons">
             <a href="#projects" className="btn btn-primary">View Projects</a>
+            <a href="#resume" className="btn btn-secondary">Resume</a>
             <a href="#contact" className="btn btn-outline">Contact Me</a>
           </div>
         </div>

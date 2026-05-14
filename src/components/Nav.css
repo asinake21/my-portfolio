@@ -4,17 +4,19 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 16px 0;
-  transition: all 0.3s ease;
-  background-color: var(--nav-bg);
-  border-bottom: 1px solid var(--nav-border);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 24px 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Fixed dark background, not affected by theme toggle */
+  background: rgba(15, 23, 42, 0.95); 
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .navbar.scrolled {
   padding: 12px 0;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  background: rgba(2, 6, 23, 0.98);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .nav-container {
@@ -27,21 +29,23 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  font-weight: 800;
-  font-size: 1.25rem;
-  color: var(--nav-text);
+  font-weight: 900;
+  font-size: 1.6rem;
+  color: #ffffff; /* Fixed white text */
+  text-decoration: none;
 }
 
 .logo-box {
-  width: 36px;
-  height: 36px;
-  background: linear-gradient(to bottom right, var(--accent-primary), var(--accent-secondary));
-  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
 }
 
 .nav-links {
@@ -50,16 +54,33 @@
 }
 
 .nav-links a {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--nav-text);
-  opacity: 0.8;
+  font-size: 1.1rem;
+  font-weight: 800; /* Extra bold as requested */
+  color: #ffffff; /* Fixed white text */
+  opacity: 0.7;
   transition: all 0.3s ease;
+  position: relative;
+  padding: 8px 0;
+  text-decoration: none;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+  transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: var(--accent-primary);
   opacity: 1;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .nav-actions {
@@ -72,45 +93,42 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 24px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 28px;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  color: #fff;
+  border: none;
   border-radius: 99px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--nav-text);
+  font-size: 0.95rem;
+  font-weight: 800; /* Bold */
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
 }
 
 .resume-btn:hover {
-  border-color: var(--accent-primary);
-  background-color: rgba(255, 255, 255, 0.15);
-  transform: translateY(-2px);
-}
-
-.status-dot {
-  display: none; /* Removed for Resume button */
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
 }
 
 .theme-switcher {
-  background: none;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  width: 42px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.2rem;
   transition: all 0.3s ease;
-  color: var(--nav-text);
+  color: #ffffff; /* Fixed white icon */
 }
 
 .theme-switcher:hover {
   border-color: var(--accent-primary);
+  transform: rotate(15deg);
 }
 
 @media (max-width: 900px) {
