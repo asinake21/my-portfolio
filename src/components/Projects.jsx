@@ -62,7 +62,6 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-
               <div className="project-info-v2">
                 <div className="project-tags">
                   {project.tech.map((t, j) => (
