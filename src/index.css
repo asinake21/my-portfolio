@@ -13,7 +13,7 @@
   --nav-border: rgba(0, 0, 0, 0.05);
 
   /* Refined Downscaled Container Widths */
-  --container-width: 1280px; /* Standard width for About, Skills, Projects */
+  --container-width: 1100px; /* Even more focused for sub-pages */
   --container-width-large: 1600px; /* Balanced width for Home/Hero */
   --section-padding: 80px;
   --transition-speed: 0.4s;

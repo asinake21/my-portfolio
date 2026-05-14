@@ -5,9 +5,9 @@
 .skills-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px 80px;
-  max-width: 1200px;
-  margin: 40px auto 0;
+  gap: 30px 60px; /* Reduced gap */
+  max-width: 100%; /* Respect container */
+  margin: 30px auto 0;
 }
 
 .skill-item {
@@ -17,9 +17,9 @@
 .skill-info {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 12px;
-  font-size: 1.4rem; /* Matching the massive scale */
-  font-weight: 800;
+  margin-bottom: 8px;
+  font-size: 1.1rem; /* Downscaled */
+  font-weight: 700;
   color: var(--text-primary);
 }
 
@@ -29,7 +29,7 @@
 
 .progress-container {
   width: 100%;
-  height: 10px;
+  height: 8px; /* Slightly thinner */
   background-color: var(--border-color);
   border-radius: 99px;
   overflow: hidden;
@@ -45,10 +45,10 @@
 @media (max-width: 900px) {
   .skills-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 24px;
   }
   
   .skill-info {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }

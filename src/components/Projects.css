@@ -4,13 +4,13 @@
 
 .projects-grid-layout {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); /* Slightly smaller cards */
-  gap: 50px;
-  margin-top: 60px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Further reduced card size */
+  gap: 32px; /* Reduced gap */
+  margin-top: 40px;
 }
 
 .project-card-v2 {
-  border-radius: 32px;
+  border-radius: 24px; /* Reduced radius */
   background-color: var(--bg-color);
   border: 1px solid var(--border-color);
   overflow: hidden;
@@ -18,7 +18,7 @@
 }
 
 .project-card-v2:hover {
-  transform: translateY(-15px);
+  transform: translateY(-10px);
   border-color: var(--accent-primary);
   box-shadow: var(--card-shadow);
 }
@@ -37,25 +37,25 @@
 }
 
 .project-card-v2:hover .p-img {
-  transform: scale(1.1);
+  transform: scale(1.05); /* Reduced zoom */
 }
 
 .project-info-v2 {
-  padding: 32px; /* Adjusted for smaller cards */
+  padding: 24px; /* Reduced padding */
 }
 
 .project-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 24px;
+  gap: 8px;
+  margin-bottom: 16px;
 }
 
 .project-pill {
-  font-size: 0.9rem;
-  font-weight: 800;
+  font-size: 0.8rem; /* Downscaled */
+  font-weight: 700;
   text-transform: uppercase;
-  padding: 6px 16px;
+  padding: 4px 12px;
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 99px;
@@ -63,29 +63,29 @@
 }
 
 .p-title-v2 {
-  font-size: 1.8rem; /* Massive title */
-  margin-bottom: 15px;
+  font-size: 1.4rem; /* Downscaled from 1.8rem */
+  margin-bottom: 12px;
   color: var(--text-primary);
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .p-desc-v2 {
-  font-size: 1.2rem; /* Large description */
+  font-size: 1rem; /* Downscaled from 1.2rem */
   color: var(--text-secondary);
   line-height: 1.6;
 }
 
 .overlay-btns {
   display: flex;
-  gap: 15px;
-  margin-top: 30px;
+  gap: 12px;
+  margin-top: 24px;
 }
 
 .overlay-btn {
-  padding: 12px 28px;
+  padding: 10px 24px;
   border-radius: 99px;
-  font-size: 1rem;
-  font-weight: 800;
+  font-size: 0.9rem;
+  font-weight: 700;
   text-decoration: none;
   transition: all 0.3s ease;
 }
@@ -101,8 +101,8 @@
 }
 
 .overlay-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 600px) {
@@ -111,6 +111,6 @@
   }
   
   .project-info-v2 {
-    padding: 24px;
+    padding: 20px;
   }
 }
